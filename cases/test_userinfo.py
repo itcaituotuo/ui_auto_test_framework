@@ -1,5 +1,5 @@
 # -*- coding:utf-8 -*-
-# 作者：IT小学生蔡坨坨(caituotuo.top)
+# 作者：测试蔡坨坨(caituotuo.top)
 # 时间：2022/6/12 13:54
 # 功能：用户资料 相关测试用例
 
@@ -14,6 +14,6 @@ class TestUserInfo:
     @pytest.mark.usefixtures("login")
     def test_1(self, login):
         obj = UserInfoPage(login)
-        obj.edit_nic("IT小学生蔡坨坨")
+        obj.edit_nic("测试蔡坨坨")
         expect = obj.get_tip()
         assert expect == "修改成功"

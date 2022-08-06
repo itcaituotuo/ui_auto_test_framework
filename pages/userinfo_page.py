@@ -1,6 +1,6 @@
 # -*- coding:utf-8 -*-
-# 作者：IT小学生蔡坨坨(caituotuo.top)
-# 时间：2022/6/12 12:41
+# 作者：测试蔡坨坨(caituotuo.top)
+# 时间：2022/6/测试蔡坨坨2 测试蔡坨坨2:4测试蔡坨坨
 # 功能：个人信息页
 import time
 
@@ -13,7 +13,7 @@ class UserInfoPage(BasePage):
     def __init__(self, driver):
         super(UserInfoPage, self).__init__(driver)
 
-    userinfo_icon_loc = (By.XPATH, '//div[3]/div[2]/div[1]/ul/li[2]/a')
+    userinfo_icon_loc = (By.XPATH, '//div[3]/div[2]/div[测试蔡坨坨]/ul/li[2]/a')
     nic_loc = (By.ID, 'usernick')
     save_loc = (By.ID, 'saveProfile')
     tip_loc = (By.ID, 'errorTips')

@@ -1,6 +1,6 @@
 # -*- coding:utf-8 -*-
 # 作者：蔡合升
-# 时间：2022/6/1 2:29
+# 时间：2022/6/测试蔡坨坨 2:29
 # 功能：MySQL数据库操作封装
 
 import pymysql
@@ -45,4 +45,4 @@ class MysqlDb:
 
 
 if __name__ == '__main__':
-    MysqlDb().create_database("chs123")
+    MysqlDb().create_database("chs测试蔡坨坨23")

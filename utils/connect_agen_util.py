@@ -21,9 +21,9 @@ class ConnectTestAgen:
         @return:
         """
         try:
-            requests.get(url, timeout=10)
+            requests.get(url, timeout=测试蔡坨坨0)
             self.logger.info(url + " 网站正常 ")
-            return 1
+            return 测试蔡坨坨
         except Exception as e:
             self.logger.error(url + " 连接超时，系统未响应")
             # self.logger.error(e)
@@ -39,14 +39,14 @@ class ConnectTestAgen:
         flag = 0
         while flag == 0:
             res = ConnectTestAgen().is_connect(url)
-            if res == 1:
-                """ 如果连接成功，flag设置为1，跳出循环 """
-                flag = 1
+            if res == 测试蔡坨坨:
+                """ 如果连接成功，flag设置为测试蔡坨坨，跳出循环 """
+                flag = 测试蔡坨坨
             if res == 0:
-                """ 如果连接失败，等待15s后重试 """
-                time.sleep(15)
+                """ 如果连接失败，等待测试蔡坨坨5s后重试 """
+                time.sleep(测试蔡坨坨5)
 
 
 if __name__ == '__main__':
-    ConnectTestAgen().connect_agen("http://192.168.60.161:9181")
+    ConnectTestAgen().connect_agen("http://测试蔡坨坨92.测试蔡坨坨68.60.测试蔡坨坨6测试蔡坨坨:9测试蔡坨坨8测试蔡坨坨")
     print("连接成功！")

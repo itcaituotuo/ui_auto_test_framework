@@ -34,7 +34,7 @@ class BasePage(object):
 
         self.driver = driver
 
-    def _wait_ele_visible(self, loc, loc_doc, times=测试蔡坨坨0, poll_frequency=0.5):
+    def _wait_ele_visible(self, loc, loc_doc, times=10, poll_frequency=0.5):
         """
         等待元素可见
         :param loc: 元素定位
@@ -70,7 +70,7 @@ class BasePage(object):
             self._save_screenshot(loc_doc)
             raise
 
-    def _click_button(self, loc, loc_doc, times=测试蔡坨坨0, poll_frequency=0.5):
+    def _click_button(self, loc, loc_doc, times=10, poll_frequency=0.5):
         """
         点击元素
         :param loc: 元素定位
@@ -88,7 +88,7 @@ class BasePage(object):
             self._save_screenshot(loc_doc)
             raise
 
-    def _send_keys(self, loc, text, loc_doc, timeout=测试蔡坨坨0, frequency=0.5, clear=True):
+    def _send_keys(self, loc, text, loc_doc, timeout=10, frequency=0.5, clear=True):
         """
         输入文本
         :param loc: 元素位置
@@ -102,7 +102,7 @@ class BasePage(object):
         try:
             self.logger.info("开始在【{}】元素中输入文本【{}】".format(loc_doc, text))
             self._wait_ele_visible(loc, loc_doc, timeout, frequency)
-            time.sleep(测试蔡坨坨)
+            time.sleep(10)
             if clear:
                 self._find_element(loc, loc_doc).clear()
             self._find_element(loc, loc_doc).send_keys(text)
@@ -122,7 +122,7 @@ class BasePage(object):
             screenshot_path = GetPathInfo().get_project_path() + r"/reports/screenshot"
             if not os.path.exists(screenshot_path):
                 os.makedirs(screenshot_path)
-            file_name = screenshot_path + "/{测试蔡坨坨}_{0}.png".format(self.time.get_now_datetime_v2(), pic_name)
+            file_name = screenshot_path + "/{}_{}.png".format(self.time.get_now_datetime_v2(), pic_name)
             self.driver.get_screenshot_as_file(file_name)
             self.logger.info("成功截图保存到{}".format(file_name))
         except Exception:

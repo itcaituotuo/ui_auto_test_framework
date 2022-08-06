@@ -7,7 +7,7 @@ import time
 
 import requests
 
-from utils.log_util import GetLogger
+from utils.get_logger import GetLogger
 
 
 class ConnectTestAgen:

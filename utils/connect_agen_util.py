@@ -7,7 +7,7 @@ import time
 
 import requests
 
-from utils.get_logger import GetLogger
+from utils.log_util import GetLogger
 
 
 class ConnectTestAgen:
@@ -21,9 +21,9 @@ class ConnectTestAgen:
         @return:
         """
         try:
-            requests.get(url, timeout=测试蔡坨坨0)
+            requests.get(url, timeout=2)
             self.logger.info(url + " 网站正常 ")
-            return 测试蔡坨坨
+            return 1
         except Exception as e:
             self.logger.error(url + " 连接超时，系统未响应")
             # self.logger.error(e)
@@ -39,14 +39,14 @@ class ConnectTestAgen:
         flag = 0
         while flag == 0:
             res = ConnectTestAgen().is_connect(url)
-            if res == 测试蔡坨坨:
+            if res == 1:
                 """ 如果连接成功，flag设置为测试蔡坨坨，跳出循环 """
-                flag = 测试蔡坨坨
+                flag = 1
             if res == 0:
                 """ 如果连接失败，等待测试蔡坨坨5s后重试 """
-                time.sleep(测试蔡坨坨5)
+                time.sleep(5)
 
 
 if __name__ == '__main__':
-    ConnectTestAgen().connect_agen("http://测试蔡坨坨92.测试蔡坨坨68.60.测试蔡坨坨6测试蔡坨坨:9测试蔡坨坨8测试蔡坨坨")
+    ConnectTestAgen().connect_agen("")
     print("连接成功！")

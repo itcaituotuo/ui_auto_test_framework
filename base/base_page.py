@@ -34,7 +34,7 @@ class BasePage(object):
 
         self.driver = driver
 
-    def _wait_ele_visible(self, loc, loc_doc, times=10, poll_frequency=0.5):
+    def _wait_ele_visible(self, loc, loc_doc, times=3, poll_frequency=0.5):
         """
         等待元素可见
         :param loc: 元素定位
@@ -70,7 +70,7 @@ class BasePage(object):
             self._save_screenshot(loc_doc)
             raise
 
-    def _click_button(self, loc, loc_doc, times=10, poll_frequency=0.5):
+    def _click_button(self, loc, loc_doc, times=3, poll_frequency=0.5):
         """
         点击元素
         :param loc: 元素定位
@@ -88,7 +88,7 @@ class BasePage(object):
             self._save_screenshot(loc_doc)
             raise
 
-    def _send_keys(self, loc, text, loc_doc, timeout=10, frequency=0.5, clear=True):
+    def _send_keys(self, loc, text, loc_doc, timeout=3, frequency=0.5, clear=True):
         """
         输入文本
         :param loc: 元素位置
@@ -102,7 +102,7 @@ class BasePage(object):
         try:
             self.logger.info("开始在【{}】元素中输入文本【{}】".format(loc_doc, text))
             self._wait_ele_visible(loc, loc_doc, timeout, frequency)
-            time.sleep(10)
+            # time.sleep(10)
             if clear:
                 self._find_element(loc, loc_doc).clear()
             self._find_element(loc, loc_doc).send_keys(text)

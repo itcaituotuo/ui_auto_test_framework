@@ -13,7 +13,7 @@ driver = webdriver.Chrome()
 driver.get("https://sso.kuaidi100.com/sso/v2/authorize.do")
 driver.maximize_window()
 driver.find_element(By.ID, 'name').send_keys("15059224492")
-driver.find_element(By.ID, 'password').send_keys("3101223chs")
+driver.find_element(By.ID, 'password').send_keys("admin#123")
 driver.find_element(By.ID, 'submit').click()
 time.sleep(3)
 text = driver.find_element(By.XPATH, '//*[@id="menu-track"]/a').text

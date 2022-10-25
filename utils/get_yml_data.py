@@ -43,3 +43,8 @@ class GetYmlData:
 
     def get_config(self):
         return self.get_yml_data("config/config.yml")
+
+
+if __name__ == '__main__':
+    print(GetYmlData().get_config())
+    GetYmlData().get_yml_data("", {"usernme": "123"})

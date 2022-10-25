@@ -14,8 +14,8 @@ class TestCaseLogin:
     @allure.title("登录——错误的用户名和密码")
     def test_0(self, access_web):
         obj = LoginPage(access_web)
-        obj.login("***********", "***********")
-        assert obj.get_warn_text() == "用户名或密码错误"
+        obj.login("123", "123")
+        assert obj.get_warn_text() == "用户不存在或者密码错误"
 
     @allure.title("登录——正确的用户名和密码")
     @pytest.mark.usefixtures("login")

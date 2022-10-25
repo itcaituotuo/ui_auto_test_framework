@@ -1,2 +1,5 @@
 login_url: https://sso.kuaidi100.com/sso/v2/authorize.do
 driver_type: Chrome # 浏览器驱动，谷歌（Chrome）、火狐（Firefox）
+mysql_db:
+  host: 127.0.0.1
+  port: 3306

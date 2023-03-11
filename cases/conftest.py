@@ -40,7 +40,7 @@ def access_web():
     driver.quit()
 
 
-@pytest.fixture(scope='function')
+@pytest.fixture(scope="function")
 def login(access_web):
     """
     登录系统

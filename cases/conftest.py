@@ -47,7 +47,7 @@ def login(access_web):
     :param access_web:
     :return:
     """
-    data = yml.get_yml_data("data/login/r1.yml")
+    data = yml.get_yml_data("data/login/r0.yml")
     LoginPage(access_web).login(data["username"], data["password"])
     yield access_web
     logger.info("----------单条用例执行完毕----------")
